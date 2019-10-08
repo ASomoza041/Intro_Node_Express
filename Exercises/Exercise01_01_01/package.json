@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/ASomoza041/Intro_Node_Express/issues"
   },
-  "homepage": "https://github.com/ASomoza041/Intro_Node_Express#readme"
+  "homepage": "https://github.com/ASomoza041/Intro_Node_Express#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {}
 }
