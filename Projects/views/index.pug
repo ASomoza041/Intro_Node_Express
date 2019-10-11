@@ -5,14 +5,15 @@ html
         nav
             ul(class="reveal")
                 li
-                    a(href="index.pug" ) Home
+                    a(href="/" ) Home
                 li
-                    a(href="about.pug") About Staff
+                    a(href="/about") About Our Staff
                 li
-                    a(href="form.pug") 
+                    a(href="/location") Location
                 li
-                    a(href="contact.pug") Contact
+                    a(href="/movies") Movies
                 l1
-                    a(href="reviews.pug") Customer Reviews
+                    a(href="/reviews") Reviews
         h1= message
-        p= data.name
+        h3= data.name
+        h3= data2.name
