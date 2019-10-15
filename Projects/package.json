@@ -15,5 +15,6 @@
     "node-fetch": "^2.6.0",
     "nodemon": "^1.19.3",
     "pug": "^2.0.4"
-  }
+  },
+  "devDependencies": {}
 }

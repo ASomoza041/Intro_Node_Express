@@ -5,39 +5,38 @@ const app = express();
 const port = 8080;
 
 var muk = {
-      name: "Muk",
-      gender: "male",
-      age: "late teens",
-      eye_color: "brown",
-      hair_color: "brown"
-    }
-    
-var snorlax =  {
-    id: "bb924631-067e-4426-b3ce-f3282fa848f0",
-    name: "Klye",
-    gender: "male",
-    age: "25",
-    eye_color: "Blue",
-    hair_color: "Blonde"
-  }
+    name: "Muk",
+    type: "Poison",
+    height: "3ft 11in",
+    weight: "66.1 lbs",
+    ability1: "Stench",
+    ability2: "Sticky Hold"
+}
 
-var squirtle =  {
-    id: "ba924631-068e-4436-b6de-f3283fa848f0",
-    name: "Maria",
-    gender: "female",
-    age: "20",
-    eye_color: "brown",
-    hair_color: "red"
-  }
+var snorlax = {
+    name: "Snorlax",
+    type: "Normal",
+    height: "6ft 11in",
+    weight: "1014.1 lbs",
+    ability1: "Thick Fat",
+    ability2: "Immunity"
+}
 
-var mudkip =  {
-    id: "ba924631-068e-4436-b6de-f3283fa848f0",
-    name: "Juan",
-    gender: "male",
-    age: "19",
-    eye_color: "brown",
-    hair_color: "brown"
-  }
+var squirtle = {
+    name: "Squirtle",
+    type: "Water",
+    height: "1ft 08in",
+    weight: "19.8 lbs",
+    ability1: "Torrent"
+}
+
+var mudkip = {
+    name: "Mudkip",
+    type: "Water",
+    height: "1ft 04in",
+    weight: "16.8 lbs",
+    ability1: "Torrent"
+}
 
 
 
@@ -56,33 +55,29 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: "Studio Ghibli",
-        message: "MARIA",
-        data2: staff2
+        title: "Muk",
+        data: muk
     });
 });
 
 app.get('/location', (req, res) => {
     res.render('location', {
-        title: "Studio Ghibli",
-        message: "Location",
-        data3: staff3
+        title: "Snorlax",
+        data: snorlax
     });
 });
 
 app.get('/reviews', (req, res) => {
     res.render('reviews', {
-        title: "Studio Ghibli",
-        message: "Reviews",
-        data4: staff4
+        title: "Squirtle",
+        data: squirtle
     });
 });
 
 app.get('/movies', (req, res) => {
     res.render('movies', {
-        title: "Studio Ghibli",
-        message: "Movies",
-        data5: staff1
+        title: "Mudkip",
+        data: mudkip
     });
 });
 
