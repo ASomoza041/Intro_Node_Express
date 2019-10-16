@@ -1,3 +1,5 @@
+//https://pokeapi.co/api/v2/pokemon/diglett
+
 const express = require("express");
 const path = require('path');
 const fetch = require('node-fetch');
@@ -43,39 +45,45 @@ var mudkip = {
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
-
+fetch('https://pokeapi.co/api/v2/pokemon/diglett')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+    const {...img} = data.sprites;
+    console.log(img);
+  });
 
 app.get('/', (req, res) => {
     res.render('index', {
         title: "Studio Ghibli",
         message: "Staff",
-        data: staff1
+        data: muk
     });
 });
 
-app.get('/about', (req, res) => {
-    res.render('about', {
+app.get('/muk', (req, res) => {
+    res.render('muk', {
         title: "Muk",
         data: muk
     });
 });
 
-app.get('/location', (req, res) => {
-    res.render('location', {
+app.get('/snorlax', (req, res) => {
+    res.render('snorlax', {
         title: "Snorlax",
         data: snorlax
     });
 });
 
-app.get('/reviews', (req, res) => {
-    res.render('reviews', {
+app.get('/squirtle', (req, res) => {
+    res.render('squirtle', {
         title: "Squirtle",
         data: squirtle
     });
 });
 
-app.get('/movies', (req, res) => {
-    res.render('movies', {
+app.get('/mudkip', (req, res) => {
+    res.render('mudkip', {
         title: "Mudkip",
         data: mudkip
     });
