@@ -45,21 +45,26 @@ var mudkip = {
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
-fetch('https://pokeapi.co/api/v2/pokemon/diglett')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-    const {...img} = data.sprites;
-    console.log(img);
-  });
+// fetch('https://pokeapi.co/api/v2/pokemon/diglett')
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data)
+//     const {...img} = data.sprites;
+//     console.log(img);
+//   });
 
 app.get('/', (req, res) => {
-    res.render('index', {
-        title: "Studio Ghibli",
-        message: "Staff",
-        data: muk
-    });
+    const request = fetch('https://pokeapi.co/api/v2/pokemon/miltank')
+    .then(res => res.json())
+    .then(
+        (pikachu) => {
+            console.log(pikachu)
+            res.render('index', {
+                image:pikachu
+            })
+        })
 });
+
 
 app.get('/muk', (req, res) => {
     res.render('muk', {
