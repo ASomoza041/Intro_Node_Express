@@ -53,16 +53,36 @@ app.set("views", path.join(__dirname, "views"));
 //     console.log(img);
 //   });
 
-app.get('/', (req, res) => {
-    const request = fetch('https://pokeapi.co/api/v2/pokemon/miltank')
-    .then(res => res.json())
-    .then(
-        (pikachu) => {
-            console.log(pikachu)
-            res.render('index', {
-                image:pikachu
-            })
-        })
+app.get('/', async (req, res) => {
+    const mudkipFetch = await fetch('https://pokeapi.co/api/v2/pokemon/mudkip');
+    mudkip = await mudkipFetch.json();
+
+    const cuboneFetch = await fetch('https://pokeapi.co/api/v2/pokemon/cubone');
+    cubone = await cuboneFetch.json();
+
+    const squirtleFetch = await fetch('https://pokeapi.co/api/v2/pokemon/squirtle');
+    squirtle = await squirtleFetch.json();
+
+    const snorlaxFetch = await fetch('https://pokeapi.co/api/v2/pokemon/snorlax');
+    snorlax = await snorlaxFetch.json();
+    
+    //console.log("pikachu \n"+pikachu);
+    
+
+    res.render('index', {
+        mudkipData:mudkip,
+        cuboneData: cubone,
+        squirtleData: squirtle,
+        snorlaxData: snorlax
+    })
+    // .then(res => res.json())
+    // .then(
+    //     (pikachu) => {
+    //         console.log(pikachu)
+            // res.render('index', {
+            //     image:pikachu
+            // })
+    //     })
 });
 
 
