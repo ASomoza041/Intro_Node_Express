@@ -1,25 +1,25 @@
 html 
     head
         title= title
-body 
+body(style="width:100%") 
         nav
             ul
-                li
+                li(style="display:inline; float:left; width:19%")
                     a(href="/" ) Home
-                li
+                li(style="display:inline; float:left; width:19%")
                     a(href="/muk") Muk
-                li
+                li(style="display:inline; float:left; width:19%")
                     a(href="/snorlax") Snorlax
-                li
+                li(style="display:inline; float:left; width:19%")
                     a(href="/mudkip") Mudkip
-                li
+                li(style="display:inline; float:left; width:19%")
                     a(href="/squirtle") Squirtle
 
         h1(style="font-size:100px; text-align:center") THE TOP 4 BEST POKÉMON
-        p This website is all about the top 4 best pokémon ever!
-        div(style="background-color:blue")
-            img(src=`${squirtleData.sprites.front_default}`, alt="", style="width:250px%;height:250px")
-            img(src=`${mudkipData.sprites.front_default}`, alt="", style="width:250px%;height:250px")
-            img(src=`${cuboneData.sprites.front_default}`, alt="", style="width:250px%;height:250px")
-            img(src=`${snorlaxData.sprites.front_default}`, alt="", style="width:250px%;height:250px")
+        h3(style="text-align:center; font-size: 40px") This website is all about the top 4 best pokémon of all time.
+        div(style="display: flex; align-items: center; width: 100%")
+            img(src=`${squirtleData.sprites.front_default}`, alt="", style="width:250px;height:250px; margin: 0px auto 0px auto")
+            img(src=`${mudkipData.sprites.front_default}`, alt="", style="width:250px;height:250px; margin: 0px auto 0px auto")
+            img(src=`${cuboneData.sprites.front_default}`, alt="", style="width:250px;height:250px; margin: 0px auto 0px auto")
+            img(src=`${snorlaxData.sprites.front_default}`, alt="", style="width:250px;height:250px; margin: 0px auto 0px auto")
         
