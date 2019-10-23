@@ -70,6 +70,7 @@ app.get('/', async (req, res) => {
     
 
     res.render('index', {
+        title: "Home",
         mudkipData:mudkip,
         cuboneData: cubone,
         squirtleData: squirtle,
