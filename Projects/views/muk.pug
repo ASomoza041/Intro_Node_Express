@@ -1,21 +1,27 @@
-html 
+html(style="background: linear-gradient(white, white, pink") 
     head
         title= title
-body 
+body(style="width:80%; margin: 0px auto 0px auto;")  
         nav
             ul
-                li(style="display:inline; float:left; width:19%")
+                nav
+            ul(style="margin: 10px auto 10px auto")
+                li(style="display:inline; float:left; width:20%; background-color:pink; color:black; text-align:center; padding:10px 0px 10px 0px")
                     a(href="/" ) Home
-                li(style="display:inline; float:left; width:19%")
+                li(style="display:inline; float:left; width:20%; background-color:pink; color:black; text-align:center; padding:10px 0px 10px 0px")
                     a(href="/muk") Muk
-                li(style="display:inline; float:left; width:19%")
+                li(style="display:inline; float:left; width:20%; background-color:pink; color:black; text-align:center; padding:10px 0px 10px 0px")
                     a(href="/snorlax") Snorlax
-                li(style="display:inline; float:left; width:19%")
+                li(style="display:inline; float:left; width:20%; background-color:pink; color:black; text-align:center; padding:10px 0px 10px 0px")
                     a(href="/mudkip") Mudkip
-                li(style="display:inline; float:left; width:19%")
+                li(style="display:inline; float:left; width:20%; background-color:pink; color:black; text-align:center; padding:10px 0px 10px 0px")
                     a(href="/squirtle") Squirtle
 
         h1= data.name
+        hr
+        h1 Official Description
+        p "From Muk's body seeps a foul fluid that gives off a nose-bendingly horrible stench. Just one drop of this Pokémon's body fluid can turn a pool stagnant and rancid." (Official Pokémon Website)
+        img(src="http://images4.fanpop.com/image/polls/748000/748805_1308313071133_full.png?v=1308313078")
         h2 Type
         p= data.type
         h2 Height
@@ -26,7 +32,5 @@ body
         p= data.ability1
         h2 Ability 2
         p= data.ability2
-        hr
-        h1 Official Description
-        p "From Muk's body seeps a foul fluid that gives off a nose-bendingly horrible stench. Just one drop of this Pokémon's body fluid can turn a pool stagnant and rancid." (Official Pokémon Website)
+        
         

@@ -1,21 +1,25 @@
-html 
+html(style="background: linear-gradient(white, white, pink") 
     head
         title= title
-body 
+body(style="width:80%; margin: 0px auto 0px auto;") 
         nav
-            ul
-                li(style="display:inline; float:left; width:19%")
+            ul(style="margin: 10px auto 10px auto")
+                li(style="display:inline; float:left; width:20%; background-color:pink; color:black; text-align:center; padding:10px 0px 10px 0px")
                     a(href="/" ) Home
-                li(style="display:inline; float:left; width:19%")
+                li(style="display:inline; float:left; width:20%; background-color:pink; color:black; text-align:center; padding:10px 0px 10px 0px")
                     a(href="/muk") Muk
-                li(style="display:inline; float:left; width:19%")
+                li(style="display:inline; float:left; width:20%; background-color:pink; color:black; text-align:center; padding:10px 0px 10px 0px")
                     a(href="/snorlax") Snorlax
-                li(style="display:inline; float:left; width:19%")
+                li(style="display:inline; float:left; width:20%; background-color:pink; color:black; text-align:center; padding:10px 0px 10px 0px")
                     a(href="/mudkip") Mudkip
-                li(style="display:inline; float:left; width:19%")
+                li(style="display:inline; float:left; width:20%; background-color:pink; color:black; text-align:center; padding:10px 0px 10px 0px")
                     a(href="/squirtle") Squirtle
 
         h1= data.name
+        hr
+        h1 Official Description
+        p "The fin on Mudkip's head acts as highly sensitive radar. Using this fin to sense movements of water and air, this Pokémon can determine what is taking place around it without using its eyes." (Official Pokémon Website)
+        img(src="https://www3.lunapic.com/editor/working/157533578138805948?5736999388")
         h2 Type
         p= data.type
         h2 Height
@@ -24,7 +28,6 @@ body
         p= data.weight
         h2 Ability 1
         p= data.ability1
-        hr
-        h1 Official Description
-        p "The fin on Mudkip's head acts as highly sensitive radar. Using this fin to sense movements of water and air, this Pokémon can determine what is taking place around it without using its eyes." (Official Pokémon Website)
+        
+       
         
